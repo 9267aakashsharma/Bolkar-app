@@ -35,7 +35,7 @@ const App = () => {
     (async () => {
       setLoading(true);
       try {
-        const url = "http://3.132.68.57:8080/v1/getRankedAnswers";
+        const url = "https://3.132.68.57:8080/v1/getRankedAnswers";
         const response = await fetch(url);
         const apiData = await response.json();
         await setSongs(apiData);
