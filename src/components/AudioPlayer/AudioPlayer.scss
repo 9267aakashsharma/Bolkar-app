@@ -1,0 +1,53 @@
+div.audio-player {
+  display: none;
+  position: fixed;
+  margin: 0 auto;
+  padding: 0 24px;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+
+  &.active {
+    display: block;
+  }
+
+  div.audio-player-inner {
+    display: flex;
+    padding: 10px 5px;
+    color: #fff;
+    background-color: #377d22;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3), 0 4px 3px rgba(0, 0, 0, 0.22);
+
+    div.song-img {
+      margin: auto 0;
+      padding: 5px;
+      svg {
+        width: 32px;
+        height: 32px;
+        fill: #fff;
+      }
+    }
+    div.song-title {
+      margin: auto 0;
+      padding: 0 10px;
+      p {
+        margin: 0 auto;
+        padding: 0;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  div.audio-player {
+    width: 100%;
+    div.audio-player-inner {
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+    }
+  }
+}
